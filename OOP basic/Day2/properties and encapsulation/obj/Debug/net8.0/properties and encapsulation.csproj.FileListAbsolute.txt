@@ -1,0 +1,15 @@
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\properties and encapsulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\properties and encapsulation.AssemblyInfoInputs.cache
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\properties and encapsulation.AssemblyInfo.cs
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\properties and encapsulation.csproj.CoreCompileInputs.cache
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\properties and encapsulation.sourcelink.json
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\bin\Debug\net8.0\properties and encapsulation.exe
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\bin\Debug\net8.0\properties and encapsulation.deps.json
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\bin\Debug\net8.0\properties and encapsulation.runtimeconfig.json
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\bin\Debug\net8.0\properties and encapsulation.dll
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\bin\Debug\net8.0\properties and encapsulation.pdb
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\properties and encapsulation.dll
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\refint\properties and encapsulation.dll
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\properties and encapsulation.pdb
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\properties and encapsulation.genruntimeconfig.cache
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day2\properties and encapsulation\obj\Debug\net8.0\ref\properties and encapsulation.dll
