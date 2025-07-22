@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("static-concept")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c399581e383dfde093292c7a19ef55df554d2aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+689bd89e9687b561f85fcdee1d05d801cd2d7afd")]
 [assembly: System.Reflection.AssemblyProductAttribute("static-concept")]
 [assembly: System.Reflection.AssemblyTitleAttribute("static-concept")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
