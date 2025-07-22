@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44C530D6-2362-4974-8B4B-1EA4BA521C0E}|Inheritance_basic.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day3\\inheritance_basic\\inheritancebasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44C530D6-2362-4974-8B4B-1EA4BA521C0E}|Inheritance_basic.csproj|solutionrelative:inheritancebasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C530D6-2362-4974-8B4B-1EA4BA521C0E}|Inheritance_basic.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day3\\inheritance_basic\\typesofinheritance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44C530D6-2362-4974-8B4B-1EA4BA521C0E}|Inheritance_basic.csproj|solutionrelative:typesofinheritance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C530D6-2362-4974-8B4B-1EA4BA521C0E}|Inheritance_basic.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day3\\inheritance_basic\\overloadingvsoverridingnote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44C530D6-2362-4974-8B4B-1EA4BA521C0E}|Inheritance_basic.csproj|solutionrelative:overloadingvsoverridingnote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C530D6-2362-4974-8B4B-1EA4BA521C0E}|Inheritance_basic.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day3\\inheritance_basic\\virtual_keyword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44C530D6-2362-4974-8B4B-1EA4BA521C0E}|Inheritance_basic.csproj|solutionrelative:virtual_keyword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:601789491:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{65ddf8c3-8f89-4077-a6c6-dbb8853aab13}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:17:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Virtual_Keyword.cs",
+              "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\Virtual_Keyword.cs",
+              "RelativeDocumentMoniker": "Virtual_Keyword.cs",
+              "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\Virtual_Keyword.cs",
+              "RelativeToolTip": "Virtual_Keyword.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAQwFcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T10:39:43.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OverloadingVSOverridingNote.cs",
+              "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\OverloadingVSOverridingNote.cs",
+              "RelativeDocumentMoniker": "OverloadingVSOverridingNote.cs",
+              "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\OverloadingVSOverridingNote.cs",
+              "RelativeToolTip": "OverloadingVSOverridingNote.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwAsAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:55:23.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TypesOfInheritance.cs",
+              "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\TypesOfInheritance.cs",
+              "RelativeDocumentMoniker": "TypesOfInheritance.cs",
+              "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\TypesOfInheritance.cs",
+              "RelativeToolTip": "TypesOfInheritance.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAYwBAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T08:12:41.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InheritanceBasic.cs",
+              "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\InheritanceBasic.cs",
+              "RelativeDocumentMoniker": "InheritanceBasic.cs",
+              "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day3\\Inheritance_basic\\InheritanceBasic.cs",
+              "RelativeToolTip": "InheritanceBasic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T06:47:24.283Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
