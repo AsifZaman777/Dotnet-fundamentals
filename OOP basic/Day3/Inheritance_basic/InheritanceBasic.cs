@@ -1,8 +1,5 @@
-﻿using System;
-
-namespace InheritanceBasic
+﻿namespace InheritanceBasic
 {
-
     class Rectangle
     {
         protected double length;

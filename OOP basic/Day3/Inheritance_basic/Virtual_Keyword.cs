@@ -167,7 +167,7 @@ COMPARISON TABLE:
 
 class VirtualDemo
 {
-    static void DemonstrateVirtual()
+    static void Main()
     {
         /*
         POLYMORPHISM IN ACTION: All objects stored as base type (Shape) But each calls its own overridden method

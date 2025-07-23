@@ -49,9 +49,9 @@ TYPES OF INHERITANCE:
 class Animal
 {
     protected string name;
-   
+
     public Animal(string name) => this.name = name;
-    
+
     /*
     VIRTUAL METHOD PATTERN:
     Base implementation → Can be overridden in derived classes → Polymorphism
@@ -77,10 +77,10 @@ Dog.MakeSound() → overrides Animal.MakeSound() → polymorphic behavior
 class Dog : Animal
 {
     public Dog(string name) : base(name) { }
-    
+
     // Method override - runtime polymorphism
     public override void MakeSound() => Console.WriteLine($"{name} barks");
-    
+
     // New behavior specific to Dog
     public void Fetch() => Console.WriteLine($"{name} fetches the ball");
 }
@@ -110,7 +110,7 @@ Puppy.Play() → unique to Puppy class
 class Puppy : Dog
 {
     public Puppy(string name) : base(name) { }
-    
+
     public void Play() => Console.WriteLine($"{name} plays with toys");
 }
 
@@ -136,14 +136,14 @@ foreach(Animal animal in animals)
 class Cat : Animal
 {
     public Cat(string name) : base(name) { }
-    
+
     public override void MakeSound() => Console.WriteLine($"{name} meows");
 }
 
 class Bird : Animal
 {
     public Bird(string name) : base(name) { }
-    
+
     public override void MakeSound() => Console.WriteLine($"{name} chirps");
     public void Fly() => Console.WriteLine($"{name} flies high");
 }
@@ -184,9 +184,9 @@ interface IFlyable
 class Duck : Animal, ISwimmable, IFlyable
 {
     public Duck(string name) : base(name) { }
-    
+
     public override void MakeSound() => Console.WriteLine($"{name} quacks");
-    
+
     // Interface implementations
     public void Swim() => Console.WriteLine($"{name} swims in water");
     public void Fly() => Console.WriteLine($"{name} flies in sky");
@@ -218,7 +218,7 @@ interface IRunnable
 class Horse : Animal, IRunnable
 {
     public Horse(string name) : base(name) { }
-    
+
     public override void MakeSound() => Console.WriteLine($"{name} neighs");
     public void Run() => Console.WriteLine($"{name} gallops fast");
 }
@@ -252,7 +252,7 @@ class Program
         DEMONSTRATION FLOW:
         Each section shows a different inheritance type in action
         */
-        
+
         Console.WriteLine("=== SINGLE INHERITANCE ===");
         /*
         OBJECT CREATION FLOW:
@@ -261,7 +261,7 @@ class Program
         Dog dog = new Dog("Rex");
         dog.MakeSound(); // Polymorphic call - Dog's override
         dog.Fetch();     // Dog-specific method
-        
+
         Console.WriteLine("\n=== MULTILEVEL INHERITANCE ===");
         /*
         INHERITANCE CHAIN ACCESS:
@@ -271,7 +271,7 @@ class Program
         puppy.MakeSound(); // From Dog override (inherited)
         puppy.Sleep();     // From Animal (inherited through Dog)
         puppy.Play();      // Puppy-specific method
-        
+
         Console.WriteLine("\n=== HIERARCHICAL INHERITANCE ===");
         /*
         SIBLING CLASSES:
@@ -282,7 +282,7 @@ class Program
         cat.MakeSound();  // Cat's override
         bird.MakeSound(); // Bird's override
         bird.Fly();       // Bird-specific method
-        
+
         Console.WriteLine("\n=== INTERFACE INHERITANCE ===");
         /*
         MULTIPLE CAPABILITY PATTERN:
@@ -292,7 +292,7 @@ class Program
         duck.MakeSound(); // Overridden from Animal
         duck.Swim();      // From ISwimmable
         duck.Fly();       // From IFlyable
-        
+
         Console.WriteLine("\n=== HYBRID INHERITANCE ===");
         /*
         CLASS + INTERFACE COMBINATION:
@@ -301,7 +301,7 @@ class Program
         Horse horse = new Horse("Thunder");
         horse.MakeSound(); // Overridden Animal method
         horse.Run();       // Interface implementation
-        
+
         /*
         POLYMORPHISM DEMONSTRATION:
         All objects can be treated as Animal due to inheritance hierarchy

@@ -76,19 +76,19 @@ class Calculator
         Console.WriteLine("Add(int, int) called");
         return a + b;
     }
-    
+
     public int Add(int a, int b, int c)
     {
         Console.WriteLine("Add(int, int, int) called");
         return a + b + c;
     }
-    
+
     public int Add(int a, int b, int c, int d)
     {
         Console.WriteLine("Add(int, int, int, int) called");
         return a + b + c + d;
     }
-    
+
     /*
     OVERLOADING EXAMPLE 2: Different Parameter Types
     ┌─────────────────────────────────────────────────────────────┐
@@ -102,19 +102,19 @@ class Calculator
         Console.WriteLine("Multiply(int, int) called");
         return a * b;
     }
-    
+
     public double Multiply(double a, double b)
     {
         Console.WriteLine("Multiply(double, double) called");
         return a * b;
     }
-    
+
     public decimal Multiply(decimal a, decimal b)
     {
         Console.WriteLine("Multiply(decimal, decimal) called");
         return a * b;
     }
-    
+
     /*
     OVERLOADING EXAMPLE 3: Different Parameter Order
     ┌─────────────────────────────────────────────────────────────┐
@@ -127,12 +127,12 @@ class Calculator
     {
         Console.WriteLine($"Display(string, int): {message} - {number}");
     }
-    
+
     public void Display(int number, string message)
     {
         Console.WriteLine($"Display(int, string): {number} - {message}");
     }
-    
+
     /*
     OVERLOADING EXAMPLE 4: Optional Parameters vs Overloading
     ┌─────────────────────────────────────────────────────────────┐
@@ -145,7 +145,7 @@ class Calculator
         Console.WriteLine($"Power({baseNum}, {exponent}) called");
         return (int)Math.Pow(baseNum, exponent);
     }
-    
+
     //virtual method for overriding
     public virtual double Calculate(double value)
     {
@@ -162,7 +162,7 @@ class Person
     public string Name { get; set; }
     public int Age { get; set; }
     public string Email { get; set; }
-    
+
     // Constructor overloading
     public Person()
     {
@@ -171,7 +171,7 @@ class Person
         Age = 0;
         Email = "no-email";
     }
-    
+
     public Person(string name)
     {
         Console.WriteLine("Person(string) constructor");
@@ -179,7 +179,7 @@ class Person
         Age = 0;
         Email = "no-email";
     }
-    
+
     public Person(string name, int age)
     {
         Console.WriteLine("Person(string, int) constructor");
@@ -187,7 +187,7 @@ class Person
         Age = age;
         Email = "no-email";
     }
-    
+
     public Person(string name, int age, string email)
     {
         Console.WriteLine("Person(string, int, string) constructor");
@@ -195,7 +195,7 @@ class Person
         Age = age;
         Email = email;
     }
-    
+
     public override string ToString()
     {
         return $"Person: {Name}, Age: {Age}, Email: {Email}";
@@ -233,13 +233,13 @@ abstract class Vehicle
 {
     protected string brand;
     protected int year;
-    
+
     public Vehicle(string brand, int year)
     {
         this.brand = brand;
         this.year = year;
     }
-    
+
     /*
     VIRTUAL METHOD - Can be overridden - Provides default implementation
     */
@@ -247,17 +247,17 @@ abstract class Vehicle
     {
         Console.WriteLine($"Vehicle {brand} ({year}) is starting...");
     }
-    
+
     public virtual void Stop()
     {
         Console.WriteLine($"Vehicle {brand} ({year}) is stopping...");
     }
-    
+
     /*
     ABSTRACT METHOD - Must be overridden - No implementation in base class
     */
     public abstract void Move();
-    
+
     /*
     VIRTUAL METHOD with implementation - Can call base implementation in override
     */
@@ -274,12 +274,12 @@ Different implementations for each virtual method
 class Car : Vehicle
 {
     private int doors;
-    
+
     public Car(string brand, int year, int doors) : base(brand, year)
     {
         this.doors = doors;
     }
-    
+
     /*
     OVERRIDE - Completely replace base implementation
     */
@@ -287,12 +287,12 @@ class Car : Vehicle
     {
         Console.WriteLine($"Car {brand} engine starting with key ignition...");
     }
-    
+
     public override void Stop()
     {
         Console.WriteLine($"Car {brand} stopping and parking...");
     }
-    
+
     /*
     OVERRIDE - Required implementation of abstract method
     */
@@ -300,7 +300,7 @@ class Car : Vehicle
     {
         Console.WriteLine($"Car {brand} driving on roads with {doors} doors");
     }
-    
+
     /*
     OVERRIDE - Extending base implementation
     Calls base method then adds more functionality
@@ -319,28 +319,28 @@ Different behavior for same methods
 class Motorcycle : Vehicle
 {
     private bool hasSidecar;
-    
+
     public Motorcycle(string brand, int year, bool hasSidecar) : base(brand, year)
     {
         this.hasSidecar = hasSidecar;
     }
-    
+
     public override void Start()
     {
         Console.WriteLine($"Motorcycle {brand} starting with kick/electric start...");
     }
-    
+
     public override void Stop()
     {
         Console.WriteLine($"Motorcycle {brand} stopping and balancing...");
     }
-    
+
     public override void Move()
     {
         string sidecarInfo = hasSidecar ? "with sidecar" : "solo";
         Console.WriteLine($"Motorcycle {brand} riding {sidecarInfo}");
     }
-    
+
     public override void DisplayInfo()
     {
         base.DisplayInfo();
@@ -358,9 +358,9 @@ COMPLEX EXAMPLE: Both overloading and overriding in same hierarchy
 class Shape
 {
     protected string name;
-    
+
     public Shape(string name) => this.name = name;
-    
+
     /*
     VIRTUAL METHOD - Can be overridden
     */
@@ -369,7 +369,7 @@ class Shape
         Console.WriteLine("Base Shape: Cannot calculate area");
         return 0.0;
     }
-    
+
     /*
     OVERLOADED METHODS - Different parameters
     */
@@ -377,12 +377,12 @@ class Shape
     {
         Console.WriteLine($"Drawing {name} with default settings");
     }
-    
+
     public virtual void Draw(string color)
     {
         Console.WriteLine($"Drawing {name} with color: {color}");
     }
-    
+
     public virtual void Draw(string color, int thickness)
     {
         Console.WriteLine($"Drawing {name} with color: {color}, thickness: {thickness}");
@@ -392,12 +392,12 @@ class Shape
 class Circle : Shape
 {
     private double radius;
-    
+
     public Circle(string name, double radius) : base(name)
     {
         this.radius = radius;
     }
-    
+
     /*
     OVERRIDE - Different implementation
     */
@@ -406,7 +406,7 @@ class Circle : Shape
         Console.WriteLine($"Circle: Calculating area for radius {radius}");
         return Math.PI * radius * radius;
     }
-    
+
     /*
     OVERRIDE + OVERLOAD - Override base method and add new overload
     */
@@ -414,17 +414,17 @@ class Circle : Shape
     {
         Console.WriteLine($"Drawing circle {name} with radius {radius}");
     }
-    
+
     public override void Draw(string color)
     {
         Console.WriteLine($"Drawing circle {name} (radius: {radius}) with color: {color}");
     }
-    
+
     public override void Draw(string color, int thickness)
     {
         Console.WriteLine($"Drawing circle {name} (radius: {radius}) with color: {color}, border thickness: {thickness}");
     }
-    
+
     /*
     NEW OVERLOAD - Additional method specific to Circle
     */
