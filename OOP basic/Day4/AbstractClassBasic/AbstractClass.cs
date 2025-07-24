@@ -138,6 +138,3 @@
 ////•	"Any vehicle must be able to display its info (but each type displays it differently)"
 ////•	"All vehicles share some common functionality"
 
-
-
-
