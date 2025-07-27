@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day5\\Generic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28394E15-99A1-47AB-8A87-17C3B6311BB8}|Generic.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day5\\generic\\a.memorybasics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28394E15-99A1-47AB-8A87-17C3B6311BB8}|Generic.csproj|solutionrelative:a.memorybasics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{28394E15-99A1-47AB-8A87-17C3B6311BB8}|Generic.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day5\\generic\\b.boxing_unboxing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28394E15-99A1-47AB-8A87-17C3B6311BB8}|Generic.csproj|solutionrelative:b.boxing_unboxing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{28394E15-99A1-47AB-8A87-17C3B6311BB8}|Generic.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day5\\generic\\c.genericbasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28394E15-99A1-47AB-8A87-17C3B6311BB8}|Generic.csproj|solutionrelative:c.genericbasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28394E15-99A1-47AB-8A87-17C3B6311BB8}|Generic.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day5\\generic\\a.memorybasics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28394E15-99A1-47AB-8A87-17C3B6311BB8}|Generic.csproj|solutionrelative:a.memorybasics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,39 +62,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "a.MemoryBasics.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day5\\Generic\\a.MemoryBasics.cs",
               "RelativeDocumentMoniker": "a.MemoryBasics.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day5\\Generic\\a.MemoryBasics.cs",
               "RelativeToolTip": "a.MemoryBasics.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAFwAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T10:19:07.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "b.Boxing_Unboxing.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day5\\Generic\\b.Boxing_Unboxing.cs",
               "RelativeDocumentMoniker": "b.Boxing_Unboxing.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day5\\Generic\\b.Boxing_Unboxing.cs",
               "RelativeToolTip": "b.Boxing_Unboxing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAkwLwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T10:09:10.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "c.GenericBasic.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day5\\Generic\\c.GenericBasic.cs",
               "RelativeDocumentMoniker": "c.GenericBasic.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day5\\Generic\\c.GenericBasic.cs",
               "RelativeToolTip": "c.GenericBasic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T09:34:37.54Z",
               "EditorCaption": ""
