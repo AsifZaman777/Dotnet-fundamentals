@@ -1,4 +1,262 @@
 ﻿// =============================================================================
+// Analaysis: TIGHTLY COUPLED vs LOOSELY COUPLED
+// =============================================================================
+
+/*
+SCENARIO: A simple notification system that can send messages
+We'll show how SWAPPING implementations works in both approaches
+*/
+
+// =============================================================================
+// 1. TIGHTLY COUPLED EXAMPLE (BAD - HARD TO SWAP)
+// =============================================================================
+
+// ❌ TIGHTLY COUPLED - Concrete classes
+public class EmailNotifier
+{
+    public void SendMessage(string message)
+    {
+        Console.WriteLine($"📧 EMAIL: {message}");
+    }
+}
+
+public class SmsNotifier
+{
+    public void SendMessage(string message)
+    {
+        Console.WriteLine($"📱 SMS: {message}");
+    }
+}
+
+// ❌ TIGHTLY COUPLED SERVICE - Hard to change
+public class TightlyoupledAlertService
+{
+    private EmailNotifier emailNotifier; // Direct dependency!
+
+    public TightlyoupledAlertService()
+    {
+        emailNotifier = new EmailNotifier(); // Hard-coded!
+    }
+
+    public void SendAlert(string message)
+    {
+        emailNotifier.SendMessage(message);
+    }
+
+    // ❌ PROBLEM: To use SMS, we must MODIFY this class!
+    // We'd need to:
+    // 1. Add SmsNotifier field
+    // 2. Change constructor
+    // 3. Modify SendAlert method
+    // 4. Recompile and redeploy
+}
+
+// =============================================================================
+// 2. LOOSELY COUPLED EXAMPLE (GOOD - EASY TO SWAP)
+// =============================================================================
+
+// ✅ INTERFACE - Contract for any notifier
+public interface INotifier
+{
+    void SendMessage(string message); //contract
+}
+
+// ✅ IMPLEMENTATIONS - Different ways to notify
+public class EmailNotifierLoose : INotifier
+{
+    public void SendMessage(string message)
+    {
+        Console.WriteLine($"📧 EMAIL: {message}");
+    }
+}
+
+public class SmsNotifierLoose : INotifier
+{
+    public void SendMessage(string message)
+    {
+        Console.WriteLine($"📱 SMS: {message}");
+    }
+}
+
+public class SlackNotifier : INotifier
+{
+    public void SendMessage(string message)
+    {
+        Console.WriteLine($"💬 SLACK: {message}");
+    }
+}
+
+// ✅ LOOSELY COUPLED SERVICE - Easy to change
+public class LooselyoupledAlertService
+{
+    private readonly INotifier notifier; // Interface dependency!
+
+    public LooselyoupledAlertService(INotifier notifier)
+    {
+        this.notifier = notifier; //will be injected during the runtime
+    }
+
+    public void SendAlert(string message)
+    {
+        notifier.SendMessage(message);
+    }
+
+    // ✅ BENEFIT: Works with ANY INotifier implementation!
+    // No changes needed to this class!
+}
+
+// =============================================================================
+// 3. DEMONSTRATION - SWAPPING IMPLEMENTATIONS
+// =============================================================================
+
+public class SwappingDemo
+{
+    public static void RunDemo()
+    {
+        Console.WriteLine("=== TIGHTLY COUPLED - HARD TO SWAP ===");
+        DemonstrateTightCoupling();
+
+        Console.WriteLine("\n=== LOOSELY COUPLED - EASY TO SWAP ===");
+        DemonstrateLooseCoupling();
+    }
+
+    private static void DemonstrateTightCoupling()
+    {
+        // ❌ TIGHTLY COUPLED - Can only use Email
+        var tightService = new TightlyoupledAlertService();
+        tightService.SendAlert("System is down!");
+
+        Console.WriteLine("❌ To use SMS, we must MODIFY the AlertService class!");
+        Console.WriteLine("❌ This means changing source code, recompiling, and redeploying!");
+
+        // We CAN'T easily switch to SMS without code changes!
+    }
+
+    private static void DemonstrateLooseCoupling()
+    {
+        string alertMessage = "System is down!";
+
+        Console.WriteLine("✅ EASY SWAPPING - Same service, different notifiers:");
+
+        // ✅ Use Email notifier
+        var emailNotifier = new EmailNotifierLoose();
+        var emailService = new LooselyoupledAlertService(emailNotifier);
+        emailService.SendAlert(alertMessage);
+
+        // ✅ Swap to SMS notifier - NO CODE CHANGES needed!
+        var smsNotifier = new SmsNotifierLoose();
+        var smsService = new LooselyoupledAlertService(smsNotifier);
+        smsService.SendAlert(alertMessage);
+
+        // ✅ Swap to Slack notifier - STILL no code changes!
+        var slackNotifier = new SlackNotifier();
+        var slackService = new LooselyoupledAlertService(slackNotifier);
+        slackService.SendAlert(alertMessage);
+
+        Console.WriteLine("✅ Same AlertService class works with ALL implementations!");
+    }
+}
+
+// =============================================================================
+// 4. VISUAL COMPARISON
+// =============================================================================
+
+/*
+TIGHTLY COUPLED - HARD TO SWAP:
+═══════════════════════════════
+
+┌─────────────────────────┐
+│  AlertService           │
+│─────────────────────────│
+│ - EmailNotifier email   │ ◄──── DIRECT DEPENDENCY
+│ + SendAlert()           │       (Hard-coded!)
+└─────────────────────────┘
+            │
+            ▼
+┌─────────────────────────┐
+│  EmailNotifier          │
+│─────────────────────────│
+│ + SendMessage()         │
+└─────────────────────────┘
+
+Problems:
+❌ To use SMS, must modify AlertService
+❌ Can't use multiple notifiers easily
+❌ Hard to test (always sends real emails)
+❌ Violates Open/Closed Principle
+
+
+LOOSELY COUPLED - EASY TO SWAP:
+══════════════════════════════
+
+┌─────────────────────────┐
+│  AlertService           │
+│─────────────────────────│
+│ - INotifier notifier    │ ◄──── INTERFACE DEPENDENCY
+│ + SendAlert()           │       (Flexible!)
+└─────────────────────────┘
+            │
+            ▼
+┌─────────────────────────┐
+│  INotifier              │ ◄──── CONTRACT
+│─────────────────────────│
+│ + SendMessage()         │
+└─────────┬───────────────┘
+          │
+    IMPLEMENTED BY
+          │
+   ┌──────┼──────┬──────────┐
+   │      │      │          │
+   ▼      ▼      ▼          ▼
+┌─────┐ ┌───┐ ┌──────┐ ┌─────────┐
+│Email│ │SMS│ │Slack │ │ Future  │
+│     │ │   │ │      │ │ Types   │
+└─────┘ └───┘ └──────┘ └─────────┘
+
+Benefits:
+✅ Easy to swap - just change constructor parameter
+✅ Can use any notifier without code changes
+✅ Easy to test (use fake notifier)
+✅ Follows Open/Closed Principle
+*/
+
+/*
+KEY TAKEAWAYS:
+═════════════
+
+1. 🔧 TIGHTLY COUPLED:
+   • Hard-coded dependencies
+   • Must modify source code to change behavior
+   • One implementation only
+   • Difficult to test
+
+2. 🔄 LOOSELY COUPLED:
+   • Interface dependencies
+   • Change behavior by swapping implementations
+   • Multiple implementations possible
+   • Easy to test with fakes
+
+3. 🎯 SWAPPING BENEFITS:
+   • Runtime flexibility
+   • Configuration-driven behavior
+   • Easy A/B testing
+   • Gradual migration between systems
+
+4. 💡 REAL-WORLD EXAMPLE:
+   • Development: Use console notifier
+   • Testing: Use fake notifier  
+   • Production: Use email/SMS notifier
+   • Same code, different behavior!
+*/
+
+
+
+
+
+
+
+
+// =============================================================================
 // DECOUPLING ANALYSIS: Abstract Classes vs Interfaces
 // =============================================================================
 
@@ -18,336 +276,7 @@ Flexibility             │     ⭐⭐⭐    │        ⭐⭐        │       
 WINNER FOR DECOUPLING: INTERFACES 🏆
 */
 
-// =============================================================================
-// DEMONSTRATION: TIGHT vs LOOSE COUPLING
-// =============================================================================
 
-// ❌ TIGHTLY COUPLED - BAD EXAMPLE
-public class TightlyCoupledNotificationService
-{
-    private EmailSender emailSender;      // Direct dependency on concrete class
-    private SmsSender smsSender;          // Another concrete dependency
-
-    public TightlyCoupledNotificationService()
-    {
-        emailSender = new EmailSender();  // Hard-coded creation
-        smsSender = new SmsSender();      // Hard-coded creation
-    }
-
-    public void SendNotification(string message, string type)
-    {
-        if (type == "email")
-            emailSender.SendEmail(message);     // Knows about specific implementation
-        else if (type == "sms")
-            smsSender.SendSms(message);         // Knows about specific implementation
-
-        // Problem: To add new notification types, we must modify this class!
-    }
-}
-
-// ✅ LOOSELY COUPLED - GOOD EXAMPLE USING INTERFACES
-public interface INotificationSender
-{
-    void Send(string message, string recipient);
-    bool IsAvailable { get; }
-}
-
-// Concrete implementations
-public class EmailSender : INotificationSender
-{
-    public void Send(string message, string recipient)
-        => Console.WriteLine($"Email sent to {recipient}: {message}");
-    public bool IsAvailable => true;
-}
-
-public class SmsSender : INotificationSender
-{
-    public void Send(string message, string recipient)
-        => Console.WriteLine($"SMS sent to {recipient}: {message}");
-    public bool IsAvailable => true;
-}
-
-public class PushNotificationSender : INotificationSender
-{
-    public void Send(string message, string recipient)
-        => Console.WriteLine($"Push notification to {recipient}: {message}");
-    public bool IsAvailable => true;
-}
-
-// ✅ DECOUPLED SERVICE - Depends on abstraction, not concretions
-public class DecoupledNotificationService
-{
-    private readonly IEnumerable<INotificationSender> _senders;
-
-    // Dependency Injection - receives dependencies from outside
-    public DecoupledNotificationService(IEnumerable<INotificationSender> senders)
-    {
-        _senders = senders;
-    }
-
-    public void SendNotification(string message, string recipient)
-    {
-        // Can work with ANY implementation of INotificationSender
-        foreach (var sender in _senders.Where(s => s.IsAvailable))
-        {
-            sender.Send(message, recipient);
-        }
-
-        // Benefits:
-        // 1. No modification needed for new notification types
-        // 2. Easy to test with mock implementations
-        // 3. Runtime flexibility - can change implementations
-        // 4. Single Responsibility - only orchestrates, doesn't create
-    }
-}
-
-// =============================================================================
-// ABSTRACT CLASSES FOR PARTIAL DECOUPLING
-// =============================================================================
-
-// Abstract class provides some decoupling but less than interfaces
-public abstract class NotificationServiceBase
-{
-    protected readonly string serviceName;
-
-    protected NotificationServiceBase(string serviceName)
-    {
-        this.serviceName = serviceName;
-    }
-
-    // Template method pattern - defines algorithm structure
-    public void ProcessNotification(string message, string recipient)
-    {
-        if (ValidateMessage(message))
-        {
-            LogNotification(message, recipient);
-            SendMessage(message, recipient);  // Abstract - must be implemented
-            UpdateDeliveryStatus(recipient);
-        }
-    }
-
-    // Concrete methods - shared implementation
-    protected virtual bool ValidateMessage(string message) => !string.IsNullOrEmpty(message);
-    protected virtual void LogNotification(string message, string recipient)
-        => Console.WriteLine($"[{serviceName}] Logging: {message} to {recipient}");
-    protected virtual void UpdateDeliveryStatus(string recipient)
-        => Console.WriteLine($"[{serviceName}] Status updated for {recipient}");
-
-    // Abstract method - forces implementation
-    protected abstract void SendMessage(string message, string recipient);
-}
-
-public class EmailNotificationService : NotificationServiceBase
-{
-    public EmailNotificationService() : base("Email") { }
-
-    protected override void SendMessage(string message, string recipient)
-    {
-        Console.WriteLine($"📧 Email sent to {recipient}: {message}");
-    }
-}
-
-public class SmsNotificationService : NotificationServiceBase
-{
-    public SmsNotificationService() : base("SMS") { }
-
-    protected override void SendMessage(string message, string recipient)
-    {
-        Console.WriteLine($"📱 SMS sent to {recipient}: {message}");
-    }
-
-    // Can override shared behavior if needed
-    protected override bool ValidateMessage(string message)
-    {
-        return base.ValidateMessage(message) && message.Length <= 160;
-    }
-}
-
-// =============================================================================
-// DECOUPLING VISUALIZATION
-// =============================================================================
-
-/*
-TIGHT COUPLING DIAGRAM:
-═══════════════════════
-
-┌─────────────────────────┐
-│  NotificationService    │ ──┐
-│─────────────────────────│   │ DIRECTLY DEPENDS ON
-│ - EmailSender           │ ◄─┘ (knows concrete types)
-│ - SmsSender             │ ◄─┐
-│ + SendNotification()    │   │ CREATES INSTANCES
-└─────────────────────────┘   │ (hard-coded dependencies)
-             │                │
-             ▼                │
-┌─────────────────┐     ┌─────────────────┐
-│   EmailSender   │     │    SmsSender    │
-│─────────────────│     │─────────────────│
-│ + SendEmail()   │     │ + SendSms()     │
-└─────────────────┘     └─────────────────┘
-
-Problems:
-• Hard to test (can't mock dependencies)
-• Hard to extend (must modify service for new types)
-• Violation of Open/Closed Principle
-• High coupling, low cohesion
-
-
-LOOSE COUPLING DIAGRAM:
-══════════════════════
-
-┌─────────────────────────┐
-│  NotificationService    │ ──┐
-│─────────────────────────│   │ DEPENDS ON ABSTRACTION
-│ - INotificationSender[] │ ◄─┘ (interface contract)
-│ + SendNotification()    │   
-└─────────────────────────┘   
-             │                
-             ▼                
-┌─────────────────────────┐
-│  INotificationSender    │ ◄── INTERFACE CONTRACT
-│─────────────────────────│
-│ + Send()                │
-│ + IsAvailable           │
-└──────────┬──────────────┘
-           │ IMPLEMENTED BY
-     ┌─────┼─────┬─────────────┐
-     │     │     │             │
-┌──────┐ ┌───┐ ┌─────┐ ┌──────────┐
-│Email │ │SMS│ │Push │ │ Future   │
-│Sender│ │   │ │     │ │ Senders  │
-└──────┘ └───┘ └─────┘ └──────────┘
-
-Benefits:
-• Easy to test (can inject mocks)
-• Easy to extend (just add new implementations)
-• Follows SOLID principles
-• Low coupling, high cohesion
-*/
-
-// =============================================================================
-// SIMPLE DECOUPLING EXAMPLES
-// =============================================================================
-
-// Example 1: Simple Payment Processing
-public interface IPaymentProcessor
-{
-    bool ProcessPayment(decimal amount);
-    string GetPaymentMethod();
-}
-
-public class CreditCardProcessor : IPaymentProcessor
-{
-    public bool ProcessPayment(decimal amount)
-    {
-        Console.WriteLine($"Processing ${amount} via Credit Card");
-        return true;
-    }
-
-    public string GetPaymentMethod() => "Credit Card";
-}
-
-public class PayPalProcessor : IPaymentProcessor
-{
-    public bool ProcessPayment(decimal amount)
-    {
-        Console.WriteLine($"Processing ${amount} via PayPal");
-        return true;
-    }
-
-    public string GetPaymentMethod() => "PayPal";
-}
-
-// Example 2: Simple Logger Interface
-public interface ILogger
-{
-    void Log(string message);
-}
-
-public class FileLogger : ILogger
-{
-    public void Log(string message)
-    {
-        Console.WriteLine($"[FILE] {DateTime.Now}: {message}");
-    }
-}
-
-public class ConsoleLogger : ILogger
-{
-    public void Log(string message)
-    {
-        Console.WriteLine($"[CONSOLE] {DateTime.Now}: {message}");
-    }
-}
-
-// Example 3: Simple Order Service (Decoupled)
-public class OrderService
-{
-    private readonly IPaymentProcessor _paymentProcessor;
-    private readonly ILogger _logger;
-
-    // Constructor injection - receives dependencies
-    public OrderService(IPaymentProcessor paymentProcessor, ILogger logger)
-    {
-        _paymentProcessor = paymentProcessor;
-        _logger = logger;
-    }
-
-    public bool ProcessOrder(string item, decimal price)
-    {
-        _logger.Log($"Processing order for {item}");
-
-        bool success = _paymentProcessor.ProcessPayment(price);
-
-        if (success)
-            _logger.Log($"Order completed for {item} using {_paymentProcessor.GetPaymentMethod()}");
-        else
-            _logger.Log($"Order failed for {item}");
-
-        return success;
-    }
-}
-
-// =============================================================================
-// EASY-TO-UNDERSTAND USAGE EXAMPLES
-// =============================================================================
-
-public class SimpleDecouplingDemo
-{
-    public static void RunDemo()
-    {
-        Console.WriteLine("=== DECOUPLING DEMONSTRATION ===\n");
-
-        // Example 1: Different payment methods
-        var creditCardProcessor = new CreditCardProcessor();
-        var paypalProcessor = new PayPalProcessor();
-        var fileLogger = new FileLogger();
-
-        // Same service, different payment method
-        var orderService1 = new OrderService(creditCardProcessor, fileLogger);
-        var orderService2 = new OrderService(paypalProcessor, fileLogger);
-
-        orderService1.ProcessOrder("Laptop", 999.99m);
-        orderService2.ProcessOrder("Mouse", 25.50m);
-
-        Console.WriteLine("\n=== NOTIFICATION DEMONSTRATION ===\n");
-
-        // Example 2: Different notification methods
-        var notificationSenders = new List<INotificationSender>
-        {
-            new EmailSender(),
-            new SmsSender(),
-            new PushNotificationSender()
-        };
-
-        var notificationService = new DecoupledNotificationService(notificationSenders);
-        notificationService.SendNotification("Hello World!", "user@example.com");
-    }
-}
-
-// =============================================================================
-// DECOUPLING BEST PRACTICES (SIMPLIFIED)
-// =============================================================================
 
 /*
 SIMPLE DECOUPLING RULES:
