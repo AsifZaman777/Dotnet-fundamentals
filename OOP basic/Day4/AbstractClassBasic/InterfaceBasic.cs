@@ -12,7 +12,7 @@ Use cases:
 •	Testability: Interfaces make it easier to write unit tests by allowing you to mock dependencies.
  */
 
-public interface  IVehicle
+public interface IVehicle
 {
     void Drive(int speed);
     void DisplayCarInfo();

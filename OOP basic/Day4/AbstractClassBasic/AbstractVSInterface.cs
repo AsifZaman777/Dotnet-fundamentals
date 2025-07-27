@@ -31,7 +31,7 @@ public abstract class Vehicle
     protected string make;
     protected string model;
     protected DateTime manufactureDate;
-    
+
     // Constructor
     protected Vehicle(string make, string model, DateTime manufactureDate)
     {
@@ -39,16 +39,16 @@ public abstract class Vehicle
         this.model = model;
         this.manufactureDate = manufactureDate;
     }
-    
+
     // Concrete method with implementation
     public virtual void StartEngine()
     {
         Console.WriteLine($"Starting {make} {model} engine...");
     }
-    
+
     // Abstract method - must be implemented by derived classes
     public abstract void DisplaySpecifications();
-    
+
     // Common behavior
     public void ShowManufactureInfo()
     {
@@ -91,98 +91,98 @@ public interface IMaintainable
 public class Car : Vehicle, IMaintainable
 {
     private int numberOfDoors;
-    
-    public Car(string make, string model, DateTime manufactureDate, int doors) 
+
+    public Car(string make, string model, DateTime manufactureDate, int doors)
         : base(make, model, manufactureDate)
     {
         numberOfDoors = doors;
         LastMaintenanceDate = DateTime.Now.AddMonths(-6);
     }
-    
+
     // Must implement abstract method
     public override void DisplaySpecifications()
     {
         Console.WriteLine($"Car: {make} {model}, Doors: {numberOfDoors}");
     }
-    
+
     // Interface implementation
     public void PerformMaintenance()
     {
         Console.WriteLine($"Performing car maintenance on {make} {model}");
         LastMaintenanceDate = DateTime.Now;
     }
-    
+
     public DateTime LastMaintenanceDate { get; set; }
 }
 
 // Class implementing multiple interfaces
 public class Airplane : Vehicle, IFlyable, IMaintainable
 {
-    public Airplane(string make, string model, DateTime manufactureDate) 
+    public Airplane(string make, string model, DateTime manufactureDate)
         : base(make, model, manufactureDate)
     {
         LastMaintenanceDate = DateTime.Now.AddDays(-30);
     }
-    
+
     public override void DisplaySpecifications()
     {
         Console.WriteLine($"Airplane: {make} {model}, Max Altitude: {MaxAltitude} ft");
     }
-    
+
     // IFlyable implementation
     public void TakeOff()
     {
         Console.WriteLine($"{make} {model} is taking off!");
     }
-    
+
     public void Land()
     {
         Console.WriteLine($"{make} {model} is landing safely.");
     }
-    
+
     public int MaxAltitude => 35000;
-    
+
     // IMaintainable implementation
     public void PerformMaintenance()
     {
         Console.WriteLine($"Performing aircraft maintenance on {make} {model}");
         LastMaintenanceDate = DateTime.Now;
     }
-    
+
     public DateTime LastMaintenanceDate { get; set; }
 }
 
 // Amphibious vehicle - multiple capabilities
 public class Seaplane : Vehicle, IFlyable, ISwimmable, IMaintainable
 {
-    public Seaplane(string make, string model, DateTime manufactureDate) 
+    public Seaplane(string make, string model, DateTime manufactureDate)
         : base(make, model, manufactureDate)
     {
         LastMaintenanceDate = DateTime.Now.AddDays(-15);
     }
-    
+
     public override void DisplaySpecifications()
     {
         Console.WriteLine($"Seaplane: {make} {model}, Air/Water capable");
     }
-    
+
     // IFlyable
     public void TakeOff() => Console.WriteLine("Seaplane taking off from water!");
     public void Land() => Console.WriteLine("Seaplane landing on water!");
     public int MaxAltitude => 15000;
-    
+
     // ISwimmable
     public void Dive() => Console.WriteLine("Seaplane diving underwater!");
     public void Surface() => Console.WriteLine("Seaplane surfacing!");
     public int MaxDepth => 50;
-    
+
     // IMaintainable
     public void PerformMaintenance()
     {
         Console.WriteLine("Performing seaplane maintenance (air & water systems)");
         LastMaintenanceDate = DateTime.Now;
     }
-    
+
     public DateTime LastMaintenanceDate { get; set; }
 }
 
@@ -296,7 +296,7 @@ public class VehicleManager
             new Airplane("Boeing", "747", new DateTime(2022, 6, 15)),
             new Seaplane("Cessna", "208 Caravan", new DateTime(2021, 3, 10))
         };
-        
+
         // Polymorphism through abstract class
         foreach (var vehicle in vehicles)
         {
@@ -304,12 +304,12 @@ public class VehicleManager
             vehicle.DisplaySpecifications(); // Specific implementation
             vehicle.ShowManufactureInfo();   // Shared concrete method
         }
-        
+
         // Interface-based capabilities
         ProcessFlyableVehicles(vehicles.OfType<IFlyable>());
         ProcessMaintainableVehicles(vehicles.OfType<IMaintainable>());
     }
-    
+
     private void ProcessFlyableVehicles(IEnumerable<IFlyable> flyables)
     {
         foreach (var flyable in flyables)
@@ -319,7 +319,7 @@ public class VehicleManager
             flyable.Land();
         }
     }
-    
+
     private void ProcessMaintainableVehicles(IEnumerable<IMaintainable> maintainables)
     {
         foreach (var maintainable in maintainables)

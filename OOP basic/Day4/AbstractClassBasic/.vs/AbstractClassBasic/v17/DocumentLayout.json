@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\decoupling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:decoupling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\abstractvsinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:abstractvsinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\practice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:practice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\abstractclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\interfacebasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:interfacebasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\abstractvsinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:abstractvsinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\decoupling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:decoupling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,51 +67,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Practice.cs",
+              "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\Practice.cs",
+              "RelativeDocumentMoniker": "Practice.cs",
+              "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\Practice.cs",
+              "RelativeToolTip": "Practice.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwDkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T06:14:24.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Decoupling.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\Decoupling.cs",
               "RelativeDocumentMoniker": "Decoupling.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\Decoupling.cs",
               "RelativeToolTip": "Decoupling.cs",
-              "ViewState": "AgIAAGMBAAAAAAAAAAAIwG8BAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAEQBAAAAAAAAAAAwwFEBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T03:45:01.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AbstractVSInterface.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\AbstractVSInterface.cs",
               "RelativeDocumentMoniker": "AbstractVSInterface.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\AbstractVSInterface.cs",
               "RelativeToolTip": "AbstractVSInterface.cs",
-              "ViewState": "AgIAACwBAAAAAAAAAAAuwAoAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAADQBAAAAAAAAAAAwwDsBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T03:37:53.867Z"
+              "WhenOpened": "2025-07-24T03:37:53.867Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "InterfaceBasic.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\InterfaceBasic.cs",
               "RelativeDocumentMoniker": "InterfaceBasic.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\InterfaceBasic.cs",
               "RelativeToolTip": "InterfaceBasic.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wBMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAA9wEoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T14:03:21.659Z"
+              "WhenOpened": "2025-07-23T14:03:21.659Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AbstractClass.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\AbstractClass.cs",
               "RelativeDocumentMoniker": "AbstractClass.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\AbstractClass.cs",
               "RelativeToolTip": "AbstractClass.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAUwIwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAwwGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T09:57:18.745Z"
+              "WhenOpened": "2025-07-23T09:57:18.745Z",
+              "EditorCaption": ""
             }
           ]
         }
