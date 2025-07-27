@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:practice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\abstractclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:abstractclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\interfacebasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:interfacebasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\decoupling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:decoupling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\abstractvsinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:abstractvsinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\decoupling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:decoupling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\interfacebasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:interfacebasic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|c:\\users\\asif.zaman\\onedrive - lankabangla\\desktop\\dotnet-fundamentals\\oop basic\\day4\\abstractclassbasic\\abstractclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9254EAA-3D98-47D5-BE33-8A9CB1DB2791}|AbstractVSInterface.csproj|solutionrelative:abstractclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,6 +65,10 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Practice.cs",
@@ -72,53 +76,53 @@
               "RelativeDocumentMoniker": "Practice.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\Practice.cs",
               "RelativeToolTip": "Practice.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAmwDkAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T06:14:24.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Decoupling.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\Decoupling.cs",
               "RelativeDocumentMoniker": "Decoupling.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\Decoupling.cs",
               "RelativeToolTip": "Decoupling.cs",
-              "ViewState": "AgIAAEQBAAAAAAAAAAAwwFEBAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T03:45:01.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AbstractVSInterface.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\AbstractVSInterface.cs",
               "RelativeDocumentMoniker": "AbstractVSInterface.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\AbstractVSInterface.cs",
               "RelativeToolTip": "AbstractVSInterface.cs",
-              "ViewState": "AgIAADQBAAAAAAAAAAAwwDsBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACIBAAAAAAAAAAAcwEcBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-24T03:37:53.867Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InterfaceBasic.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\InterfaceBasic.cs",
               "RelativeDocumentMoniker": "InterfaceBasic.cs",
               "ToolTip": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\InterfaceBasic.cs",
               "RelativeToolTip": "InterfaceBasic.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAA9wEoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAowEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-23T14:03:21.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AbstractClass.cs",
               "DocumentMoniker": "C:\\Users\\asif.zaman\\OneDrive - LankaBangla\\Desktop\\Dotnet-fundamentals\\OOP basic\\Day4\\AbstractClassBasic\\AbstractClass.cs",
               "RelativeDocumentMoniker": "AbstractClass.cs",
@@ -126,8 +130,7 @@
               "RelativeToolTip": "AbstractClass.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAAAwwGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T09:57:18.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T09:57:18.745Z"
             }
           ]
         }
