@@ -72,7 +72,6 @@ class BoxingUnboxingDemo
         BasicBoxingUnboxing();
         BoxingWithCollections();
         InterfaceBoxing();
-        PerformanceComparison();
         CommonPitfalls();
     }
 
@@ -189,30 +188,5 @@ class BoxingUnboxingDemo
         Console.WriteLine();
     }
 
-
-    // ==============================
-    // 🔍 Example 5: Performance Comparison
-    // ==============================
-
-    static void PerformanceComparison()
-    {
-        Console.WriteLine("4. Performance Comparison: Boxing vs Unboxing");
-        // Boxing performance impact
-        int[] numbers = { 1, 2, 3, 4, 5 };
-        object[] boxedNumbers = new object[numbers.Length];
-        // Boxing each number
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            boxedNumbers[i] = numbers[i];  // Boxing
-        }
-        Console.WriteLine($"Boxed {numbers.Length} integers into objects.");
-        // Unboxing each number
-        for (int i = 0; i < boxedNumbers.Length; i++)
-        {
-            int unboxedNumber = (int)boxedNumbers[i];  // Unboxing
-            Console.WriteLine($"Unboxed number: {unboxedNumber}");
-        }
-        Console.WriteLine();
-    }
 }
 
