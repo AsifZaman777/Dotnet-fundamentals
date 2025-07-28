@@ -1,0 +1,53 @@
+﻿// Example: Basics of Garbage Collection (GC) in .NET
+// GC is responsible for automatic memory management in .NET applications.
+// It frees memory occupied by objects that are no longer accessible in your code.
+// You do not need to manually free memory for most objects.
+
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        // --- Modern Way: Automatic GC ---
+        // Objects are allocated on the managed heap.
+        // GC automatically frees memory when objects are no longer referenced.
+        string message = "Hello, GC!";
+        int[] numbers = new int[1000];
+
+        // You can force a collection (not recommended in production):
+        GC.Collect(); // Forces GC to run
+        GC.WaitForPendingFinalizers(); // Waits for finalizers to complete
+
+        Console.WriteLine($"Generation of numbers array: {GC.GetGeneration(numbers)}");
+        Console.WriteLine($"Total memory: {GC.GetTotalMemory(false)} bytes");
+
+        // --- Legacy Way: Manual Resource Management ---
+        // For unmanaged resources (like file handles), you must release them manually.
+        // The IDisposable interface and Dispose pattern are used for this.
+        FileStream fs = null;
+        try
+        {
+            fs = new FileStream("test.txt", FileMode.Create);
+            // ... use the file stream ...
+        }
+        finally
+        {
+            if (fs != null)
+                fs.Dispose(); // Legacy manual disposal
+        }
+
+        // --- Modern Way: Using Statement ---
+        // The 'using' statement ensures Dispose is called automatically.
+        using (var stream = new FileStream("test2.txt", FileMode.Create))
+        {
+            // ... use the file stream ...
+        } // Dispose is called automatically here
+
+        // Summary:
+        // - GC handles most memory automatically (managed objects)
+        // - For unmanaged resources, use IDisposable and 'using' for safe cleanup
+        // - Avoid calling GC.Collect() unless necessary (diagnostics/testing)
+    }
+}

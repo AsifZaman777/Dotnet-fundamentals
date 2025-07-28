@@ -1,0 +1,122 @@
+﻿/*
+    =============================
+    Garbage Collection in .NET
+    =============================
+
+    This file demonstrates the basics, legacy, and modern approaches to Garbage Collection (GC) in .NET.
+    It includes:
+    - Explanatory comments
+    - ASCII tables and diagrams
+    - Code samples for legacy and modern GC usage
+*/
+
+using System;
+using System.Runtime.InteropServices;
+
+namespace GC_Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Garbage Collection in .NET\n");
+            PrintTable();
+            PrintDiagram();
+            LegacyGCExample();
+            ModernGCExample();
+        }
+
+        // =============================
+        // Table: GC Generations
+        // =============================
+        static void PrintTable()
+        {
+            Console.WriteLine("GC Generations Table:");
+            Console.WriteLine("+-------------+--------------------------+");
+            Console.WriteLine("| Generation  | Description              |");
+            Console.WriteLine("+-------------+--------------------------+");
+            Console.WriteLine("| 0           | Short-lived objects      |");
+            Console.WriteLine("| 1           | Survived Gen 0           |");
+            Console.WriteLine("| 2           | Long-lived objects       |");
+            Console.WriteLine("+-------------+--------------------------+\n");
+        }
+
+        // =============================
+        // Diagram: GC Heap Structure
+        // =============================
+        static void PrintDiagram()
+        {
+            Console.WriteLine("GC Heap Structure Diagram:");
+            Console.WriteLine("  +-----------------------------+");
+            Console.WriteLine("  |        Managed Heap         |");
+            Console.WriteLine("  +-----------------------------+");
+            Console.WriteLine("  | Gen 0 | Gen 1 | Gen 2 | LOH |");
+            Console.WriteLine("  +-----------------------------+");
+            Console.WriteLine("  | Short | Mid   | Long  |Large|");
+            Console.WriteLine("  | lived | lived | lived |Objct|");
+            Console.WriteLine("  +-----------------------------+\n");
+        }
+
+        // =============================
+        // Legacy Approach: Finalize
+        // =============================
+        /*
+            Legacy GC relied on finalizers (~ClassName) to clean up unmanaged resources.
+            This approach is less predictable and not recommended for new code.
+        */
+        class LegacyResource
+        {
+            private IntPtr unmanagedMemory;
+            public LegacyResource()
+            {
+                // Allocate unmanaged memory
+                unmanagedMemory = Marshal.AllocHGlobal(100);
+            }
+            ~LegacyResource() // Finalizer
+            {
+                // Clean up unmanaged memory
+                Marshal.FreeHGlobal(unmanagedMemory);
+            }
+        }
+        static void LegacyGCExample()
+        {
+            Console.WriteLine("Legacy GC Example (using finalizer):");
+            var legacy = new LegacyResource();
+            // No explicit cleanup, relies on GC calling finalizer
+            Console.WriteLine("LegacyResource created. Cleanup is non-deterministic.\n");
+        }
+
+        // =============================
+        // Modern Approach: IDisposable
+        // =============================
+        /*
+            Modern GC uses IDisposable and 'using' for deterministic cleanup of unmanaged resources.
+        */
+        class ModernResource : IDisposable
+        {
+            private IntPtr unmanagedMemory;
+            public ModernResource()
+            {
+                unmanagedMemory = Marshal.AllocHGlobal(100);
+            }
+            public void Dispose()
+            {
+                Marshal.FreeHGlobal(unmanagedMemory);
+                GC.SuppressFinalize(this);
+            }
+            ~ModernResource() // Finalizer as backup
+            {
+                Marshal.FreeHGlobal(unmanagedMemory);
+            }
+        }
+        static void ModernGCExample()
+        {
+            Console.WriteLine("Modern GC Example (using IDisposable):");
+            using (var modern = new ModernResource())
+            {
+                Console.WriteLine("ModernResource created. Cleanup is deterministic via Dispose().");
+            }
+            Console.WriteLine();
+        }
+    }
+}
