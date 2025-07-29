@@ -128,7 +128,7 @@ OrderPlaced.Invoke() executed
     ↓
 ┌─────────────────────────────────────┐
 │  Event has 2 subscribers:           │
-│  1.OnOrderPlacedEmail  ←── Called  │
+│  1.OnOrderPlacedEmail  ←── Called   │
 │  2. OnOrderPlacedSMS    ←── Called  │
 └─────────────────────────────────────┘
 
@@ -137,7 +137,7 @@ orderService.OrderPlaced -= notificationService.OnOrderPlacedEmail;
     ↓
 ┌─────────────────────────────────────┐
 │  Event now has 1 subscriber:        │
-│  1.OnOrderPlacedSMS    ←── Only    │
+│  1.OnOrderPlacedSMS    ←── Only     │
 └─────────────────────────────────────┘
 
 SECOND ORDER PLACEMENT:
