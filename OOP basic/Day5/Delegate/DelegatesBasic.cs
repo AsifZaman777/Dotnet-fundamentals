@@ -76,3 +76,48 @@ QUICK REFERENCE:
    -= to remove methods
    ?. to safely invoke (null check)
 */
+
+
+
+/*
+ use case: Event-driven architecture with delegates
+
+DECISION MATRIX:
+┌─────────────────┬────────────┬──────────────┬─────────────┐
+│ Approach        │ Complexity │ Type Safety  │ Performance │
+├─────────────────┼────────────┼──────────────┼─────────────┤
+│ Custom Delegate │    Low     │    High      │    High     │
+│ Interface       │   Medium   │    High      │   Medium    │
+│ EventHandler<T> │    Low     │    High      │    High     │
+│ Command Pattern │    High    │    Medium    │   Medium    │
+│ Callbacks       │   Medium   │    Low       │    High     │
+└─────────────────┴────────────┴──────────────┴─────────────┘
+
+//Event -driven architecture with delegates can be implemented using various patterns. Here are some common approaches and their pros/cons:
+1. INTERFACE PATTERN:
+   ✅ Type safety through interfaces
+   ✅ Clear contracts for handlers
+   ✅ Easy to test and mock
+   ❌ More boilerplate code
+   ❌ Manual subscriber management
+
+2. EVENTHANDLER<T> PATTERN:
+   ✅ Built-in .NET pattern
+   ✅ Standardized event args
+   ✅ Less custom code
+   ❌ Still uses delegates internally
+
+3. COMMAND PATTERN:
+   ✅ Queuing and delayed execution
+   ✅ Undo/Redo capabilities
+   ✅ Decoupled execution
+   ❌ More complex implementation
+
+4. CALLBACK FUNCTIONS:
+   ✅ Functional programming style
+   ✅ Flexible method signatures
+   ❌ Less type safety
+   ❌ Harder to debug
+
+
+ */

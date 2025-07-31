@@ -121,35 +121,25 @@ class Program
 
 /*
 
-FIRST ORDER PLACEMENT:
-OrderService.PlaceOrder() called
-    ↓
-OrderPlaced.Invoke() executed
-    ↓
-┌─────────────────────────────────────┐
-│  Event has 2 subscribers:           │
-│  1.OnOrderPlacedEmail  ←── Called   │
-│  2. OnOrderPlacedSMS    ←── Called  │
-└─────────────────────────────────────┘
+OrderService ──→ OrderPlaced Event ──→ Direct Subscribers
+     │                                        │
+     │              TIGHT COUPLING            │
+     │         ┌─────────────────────┐        │
+     └─────────│  Must know about:   │────────┘
+               │  - NotificationSvc  │
+               │  - Which methods    │
+               │  - When to call     │
+               └─────────────────────┘
 
-AFTER UNSUBSCRIBING EMAIL:
-orderService.OrderPlaced -= notificationService.OnOrderPlacedEmail;
-    ↓
-┌─────────────────────────────────────┐
-│  Event now has 1 subscriber:        │
-│  1.OnOrderPlacedSMS    ←── Only     │
-└─────────────────────────────────────┘
+SUBSCRIPTION:
+orderService.OrderPlaced += notificationService.OnOrderPlacedEmail;
+orderService.OrderPlaced += notificationService.OnOrderPlacedSMS;
 
-SECOND ORDER PLACEMENT:
-OrderService.PlaceOrder() called
-    ↓
-OrderPlaced.Invoke() executed
-    ↓
-┌─────────────────────────────────────┐
-│  Event has 1 subscriber:            │
-│  1. OnOrderPlacedSMS    ←── Called  │
-│  (Email handler is gone)            │
-└─────────────────────────────────────┘
+PROBLEMS:
+❌ OrderService must know about all subscribers
+❌ Hard to add new notification types
+❌ Circular dependencies possible
+❌ Difficult to test in isolation
+❌ Violates Single Responsibility Principle
 
- 
  */

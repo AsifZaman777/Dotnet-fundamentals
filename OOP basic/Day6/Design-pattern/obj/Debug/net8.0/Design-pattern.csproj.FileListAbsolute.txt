@@ -1,0 +1,5 @@
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day6\Design-pattern\obj\Debug\net8.0\Design-pattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day6\Design-pattern\obj\Debug\net8.0\Design-pattern.AssemblyInfoInputs.cache
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day6\Design-pattern\obj\Debug\net8.0\Design-pattern.AssemblyInfo.cs
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day6\Design-pattern\obj\Debug\net8.0\Design-pattern.csproj.CoreCompileInputs.cache
+C:\Users\asif.zaman\OneDrive - LankaBangla\Desktop\Dotnet-fundamentals\OOP basic\Day6\Design-pattern\obj\Debug\net8.0\Design-pattern.sourcelink.json
